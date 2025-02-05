@@ -1,9 +1,9 @@
 import './App.css'
 import { Routes, Route, NavLink } from 'react-router'
-import Feed from './components/Feed'
-import Post from './components/Post'
-import Login from './components/Login'
-import Signup from './components/Signup'
+import Feed from './components/Feed/Feed'
+import Post from './components/Post/Post'
+import Login from './components/Login/Login'
+import Signup from './components/Signup/Signup'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <nav>
         <NavLink to='/'>Feed</NavLink>
-        <NavLink to='/post/postId'>Post</NavLink>
+        <NavLink to='/post/fakeId'>Post</NavLink>
         <NavLink to='/signup'>Signup</NavLink>
         <NavLink to='/login'>Login</NavLink>
       </nav>

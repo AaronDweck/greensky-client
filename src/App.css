@@ -1,42 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --text-primary: #f1f3f5;
+  --text-secondary: #94a5b7;
+  --background-primary: #161e27;
+  --background-secondary: #1a222e;
+  --background-tertiary: #1d2834;
+  --border: #2f3f52;
+  --brand: #39bc4d;
+  --brand-hover: #4eba5f;
+  --brand-disabled: #88ba90;
+  --error: #e60b3e;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-primary);
+}
+
 #root {
-  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+main {
+  flex-grow: 1;
+  width: 600px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 600px){
+  main {
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-bottom: 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.error-message {
+  margin: 1rem 0;
+  color: var(--error);
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.error-block {
+  margin: 1rem 0;
+  background-color: var(--error);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 1rem;
 }
